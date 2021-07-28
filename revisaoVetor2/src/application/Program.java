@@ -2,7 +2,6 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
-
 import entities.Product;
 
 public class Program {
@@ -11,13 +10,17 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Enter the amount of heights: ");
+		System.out.print("Enter the amount of products: ");
 		int n = sc.nextInt();
 		Product[] vect = new Product[n];
 
 		for (int i = 0; i < vect.length; i++) {
 			sc.nextLine();
+			System.out.print("Enter the name: ");
+
 			String name = sc.nextLine();
+			System.out.print("Enter the price: ");
+
 			double price = sc.nextDouble();
 			vect[i] = new Product(name, price);
 		}
